@@ -8,11 +8,15 @@ eleventyExcludeFromCollections: true
 <section class="container flex flex-wrap min-h-[78vh] md:min-h-[85vh] lg:min-h-[88vh]">
 	<div class="scroll-mt-16 md:scroll-mt-20 lg:scroll-mt-32 pt-32 lg:pt-48 xl:pt-64 2xl:pt-80 grid grid-cols-12 gap-4 md:gap-8 self-end">
 
-		<h1>404</h1>
-		<h2>Oops! It seems you are lost</h2>
-		<p>The page you're looking for might have been removed had its name changed or is temporarily unavailable.</p>
+		<h2 class="font-semibold tracking-tighter md:tracking-tight md:opacity-50 text-3xl md:text-4xl col-span-full md:col-span-5 ">
+			<span class="md:sticky md:top-32 xl:top-44">404</span>
+		</h2>
 
-		<a href="{{ '/' | url }}">Return to homepage</a>
+		<div class="col-span-11 md:col-span-6 md:pt-1 body-copy">
+			<h2>Oops! It seems you are lost</h2>
+			<p>The page you're looking for might have been removed had its name changed or is temporarily unavailable.</p>
 
+			<a href="{{ '/' | url }}">Return to homepage</a>
+		</div>
 	</div>
 </section>
