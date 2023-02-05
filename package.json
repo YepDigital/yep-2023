@@ -1,0 +1,47 @@
+{
+  "name": "yep-digital",
+  "version": "2.0.0",
+  "description": "Website of Yep Digital",
+  "scripts": {
+    "clean": "rimraf _site",
+    "build": "npm run clean && cross-env NODE_ENV=production eleventy",
+    "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
+    "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy",
+
+    "tw:dev": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css",
+    "tw:watch": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --watch",
+    "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YepDigital/yep-2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YepDigital/yep-2023/issues"
+  },
+  "homepage": "https://github.com/YepDigital/yep-2023#readme",
+  "browserlisturl": "https://browserslist.dev",
+  "browserslist": [
+    "last 5 versions",
+    ">= 1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@tailwindcss/typography": "^0.5.8",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.14",
+    "html-minifier": "^4.0.0",
+    "luxon": "^3.1.0",
+    "postcss": "^8.4.18",
+    "postcss-import": "^15.0.0",
+    "postcss-preset-env": "^7.8.2",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.2.2",
+    "tailwindcss-fluid-type": "^2.0.3"
+  }
+}
