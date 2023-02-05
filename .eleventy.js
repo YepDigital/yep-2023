@@ -26,16 +26,16 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
-  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
+  // eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   // Add shortlink redirects
   // https://www.raymondcamden.com/2021/06/22/dynamic-short-urls-with-eleventy
-  eleventyConfig.addCollection("goPages", collectionApi => {
-    return collectionApi.getAll().filter(p => {
-      if(p.data.go) return true;
-      return false;
-    });
-  });
+  // eleventyConfig.addCollection("goPages", collectionApi => {
+  //   return collectionApi.getAll().filter(p => {
+  //     if(p.data.go) return true;
+  //     return false;
+  //   });
+  // });
 
   return {
     dir: {
