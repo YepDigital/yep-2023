@@ -5,6 +5,7 @@ const htmlmin = require("html-minifier");
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
@@ -26,7 +27,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
-  // eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
+  eleventyConfig.addLayoutAlias('subpage', 'layouts/subpage.njk');
 
   // Add shortlink redirects
   // https://www.raymondcamden.com/2021/06/22/dynamic-short-urls-with-eleventy

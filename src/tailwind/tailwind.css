@@ -1,9 +1,32 @@
 @import "tailwindcss/base";
-
-@import "base";
-@import "typography";
-@import "spacer";
-@import "iphone";
-
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "fonts";
+
+@layer base {
+	/* body {
+		background-image: linear-gradient(rgba(255,255,255,0) 50%, rgba(255,255,255,.05) 50%);
+		background-size: 100% 4px;
+	} */
+}
+
+@layer components {
+	.container {
+		@apply w-full px-6 md:px-12 xl:px-20 py-10 lg:py-24 mx-auto scroll-mt-16 md:scroll-mt-24 lg:scroll-mt-32;
+	}
+
+	.linkify a {
+		@apply text-brand-500 hover:text-stone-600 dark:hover:text-zinc-200 dark:focus:text-white outline-0 duration-200;
+	}
+
+	.heading {
+		@apply font-extrabold tracking-tighter text-stone-400 dark:text-zinc-700 opacity-60 text-5xl sm:text-6xl sm:font-bold md:opacity-50 md:text-7xl lg:text-9xl xl:text-[9rem] 2xl:text-[10rem] 2xl:font-extrabold
+	}
+
+	.body-copy {
+		@apply prose dark:prose-invert prose-lg lg:prose-xl 2xl:prose-2xl prose-hr:border-stone-300 prose-p:text-stone-600 dark:prose-p:text-zinc-300 dark:prose-hr:border-zinc-800 prose-strong:font-semibold prose-a:text-brand-500 hover:prose-a:text-stone-800 dark:hover:prose-a:text-white prose-a:duration-300
+	}
+}
+
+@layer utilities {
+}

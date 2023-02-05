@@ -63,7 +63,7 @@ module.exports = {
         // ],
         sans: [
 					'Manrope',
-					...defaultTheme.fontFamily.sans
+					...theme.fontFamily.sans
 				],
         serif: [
           // 'Lavigne',
