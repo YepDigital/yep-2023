@@ -28,3 +28,6 @@ prepros-6.config
 ehthumbs.db
 Thumbs.db
 _notes
+
+# Local Netlify folder
+.netlify
