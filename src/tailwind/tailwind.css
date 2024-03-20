@@ -5,6 +5,41 @@
 @import "iphone";
 @import "fonts";
 
+@supports (animation-timeline: scroll()) {
+	@keyframes fadeOut {
+		from {
+			filter: saturate(1) brightness(1);
+		}
+		to {
+			filter: saturate(0) brightness(0);
+		}
+	}
+
+	@media screen(md) {
+		@keyframes fadeOut {
+			from {
+				filter: saturate(1);
+			}
+			to {
+				filter: saturate(0);
+			}
+		}
+	}
+
+	#ryan {
+		animation: fadeOut linear both;
+		animation-timeline: scroll();
+		animation-range: 0 theme(width.64);
+		view-timeline-axis: block;
+	}
+
+	@media screen(md) {
+		#ryan {
+			animation-range: 0vh 50vh;
+		}
+	}
+}
+
 @layer components {
 	.cursor-finger {
 		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🎉</text></svg>") 16 0,auto;
@@ -20,26 +55,26 @@
 	} */
 
 	.rocky {
-		position: fixed;
-		bottom: 0;
-		right: 0;
 		display: none;
-		width: 150px;
 	}
 
 	@media screen and (min-width: 2560px) {
 		.rocky {
 			display: block;
-			top: 0;
-			right: 0;
-			transition: all 100ms ease-in-out;
-			transition-delay: 250ms;
-			transform: scaleX(-1) rotate(180deg);
+			bottom: -0.5rem;
+			right: -0.5rem;
+			position: fixed;
+			width: 150px;
 
-			&:hover {
-				top: -65px;
-				right: -40px;
-				transition-delay: 0;
+			img {
+				transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
+				transition-delay: 700ms;
+			}
+
+			&:hover img {
+				transform: translateX(100%) translateY(60%);
+				transition-duration: 500ms;
+				transition-delay: 0ms;
 			}
 		}
 	}
