@@ -14,9 +14,10 @@
 		@apply text-brand-base hover:text-white outline-0 duration-200;
 	}
 
-	body {
-		background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=112d5aff&noise=626262&density=15&opacity=15");
-	}
+	/* body {
+		background-image: url("/assets/noise.png");
+		background-attachment: fixed;
+	} */
 
 	.rocky {
 		position: fixed;

@@ -62,12 +62,12 @@
 	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="flex flex-col">
+<body>
 
-	<main class="min-h-screen flex flex-wrap grow" id="main-content">
+	<main id="main-content">
 		{{ content | safe }}
 	</main>
 
-	<img class="rocky" src="{{ '/assets/rocky.png' | url }}" alt>
+	{# <img class="rocky" src="{{ '/assets/rocky.png' | url }}" alt> #}
 </body>
 </html>
