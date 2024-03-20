@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const plugin = require('tailwindcss/plugin');
 const colors = require("tailwindcss/colors");
 const theme = require("tailwindcss/defaultTheme");
 
@@ -11,8 +10,7 @@ module.exports = {
     require('tailwindcss/defaultConfig'),
   ],
 	content: [
-		"./src/**/*.{njk,md,html}",
-		"!./src/tailwind",
+		"./src/**/*.{njk,md,html,css}",
 		"!./src/sitemap.xml.njk",
 		"!./src/robots.txt.njk",
 	],
@@ -20,16 +18,44 @@ module.exports = {
     extend: {
       colors: {
 				'brand': {
-					"50": "#FAF5F5",
-					"100": "#F4E7E6",
-					"200": "#EFCECC",
-					"300": "#EEADAA",
-					"400": "#F38781",
-					"500": "#FD6057",
-					"600": "#EB372D",
-					"700": "#BC2C24",
-					"800": "#802C28",
-					"900": "#4A2321"
+					50: '#edf8ff',
+					100: '#d7eeff',
+					200: '#b9e3ff',
+					300: '#88d4ff',
+					400: '#50baff',
+					500: '#2899ff',
+					base: '#0775ff',
+					700: '#0a62eb',
+					800: '#0f4fbe',
+					900: '#134695',
+					950: '#112c5a',
+					// #022b37
+				},
+				'alt': {
+					50: "#FFF1F0",
+					100: "#FFDEDC",
+					200: "#FFC1BD",
+					300: "#FEA09A",
+					400: "#FE847B",
+					500: "#FE6157",
+					600: "#FE2516",
+					700: "#CB0F01",
+					800: "#890A01",
+					900: "#420500",
+					950: "#230300"
+				},
+				'tert': {
+					50: "#EFFAF5",
+					100: "#D8F3E7",
+					200: "#ADE6CC",
+					300: "#76D6AB",
+					400: "#3AC084",
+					500: "#2F9D6C",
+					600: "#2A8D61",
+					700: "#247A53",
+					800: "#1F6646",
+					900: "#154730",
+					950: "#103726"
 				},
         //--------------------------------------------------------------------------
         // Create a new colour class for body text to use anywhere
@@ -81,21 +107,16 @@ module.exports = {
       transitionTimingFunction: {
         DEFAULT: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
-      // Font sizes without line-height as that is set in the base layer as a fluid line height.
+			// Text sizes xl and above are fluid, max size is Tailwind's default sizes while the smallest is eyeballed to work well.
+			// Calculated using: https://min-max-calculator.9elements.com or https://royalfig.github.io/fluid-typography-calculator
+			// with Min/Max Viewports of 500/2560px
       fontSize: {
-        xs: '0.75rem',
-        sm: '0.875rem',
-        base: '1rem',
-        lg: '1.125rem',
-        xl: '1.25rem',
-        '2xl': '1.5rem',
-        '3xl': '1.875rem',
-        '4xl': '2.25rem',
-        '5xl': '3rem',
-        '6xl': '3.75rem',
-        '7xl': '4.5rem',
-        '8xl': '6rem',
-        '9xl': '8rem',
+				// Min/Max 20/21px (this does actually scale sub pixel)
+        small: ['clamp(1rem, 0.909rem + 0.29vw, 1.375rem)', '1.4'],
+				// Min/Max 18/26px
+        default: ['clamp(1.125rem, 1.004rem + 0.39vw, 1.625rem)', '1.3'],
+				// Min/Max 22/34px
+        heading: ['clamp(1.375rem, 1.193rem + 0.58vw, 2.125rem)', '1.25'],
       },
       typography: ({ theme }) => ({
         DEFAULT: {
