@@ -5,13 +5,31 @@
 @import "iphone";
 @import "fonts";
 
+/* @keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#main-content {
+	animation: fadeIn 3000ms ease-out 500ms 1 normal both;
+} */
+
 @supports (animation-timeline: scroll()) {
 	@keyframes fadeOut {
 		from {
-			filter: saturate(1) brightness(1);
+			filter: saturate(1);
+			opacity: 0.75;
 		}
 		to {
-			filter: saturate(0) brightness(0);
+			filter: saturate(0);
+			opacity: 0;
 		}
 	}
 
@@ -19,9 +37,11 @@
 		@keyframes fadeOut {
 			from {
 				filter: saturate(1);
+				opacity: 0.75;
 			}
 			to {
 				filter: saturate(0);
+				opacity: 0.5;
 			}
 		}
 	}
@@ -29,22 +49,18 @@
 	#ryan {
 		animation: fadeOut linear both;
 		animation-timeline: scroll();
-		animation-range: 0 theme(width.64);
+		animation-range: 0 theme(width.60);
 		view-timeline-axis: block;
 	}
 
 	@media screen(md) {
 		#ryan {
-			animation-range: 0vh 50vh;
+			animation-range: 0vh 20vh;
 		}
 	}
 }
 
 @layer components {
-	.cursor-finger {
-		cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🎉</text></svg>") 16 0,auto;
-	}
-
 	.linkify a {
 		@apply text-brand-base hover:text-white outline-0 duration-200;
 	}
