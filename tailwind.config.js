@@ -118,48 +118,8 @@ module.exports = {
 				// Min/Max 22/34px
         heading: ['clamp(1.375rem, 1.193rem + 0.58vw, 2.125rem)', '1.25'],
       },
-      typography: ({ theme }) => ({
-        DEFAULT: {
-          css: {
-            '--tw-prose-body': theme('colors.primary.700'),
-            '--tw-prose-headings': theme('colors.primary.600'),
-            '--tw-prose-lead': theme('colors.primary.700'),
-            '--tw-prose-links': theme('colors.primary.500'),
-            '--tw-prose-bold': theme('colors.primary.700'),
-            '--tw-prose-counters': theme('colors.primary.500'),
-            '--tw-prose-bullets': theme('colors.primary.500'),
-            '--tw-prose-hr': theme('colors.primary.600'),
-            '--tw-prose-quotes': theme('colors.primary.600'),
-            '--tw-prose-quote-borders': theme('colors.primary.600'),
-            '--tw-prose-captions': theme('colors.primary.600'),
-            '--tw-prose-code': theme('colors.primary.600'),
-            '--tw-prose-pre-code': theme('colors.primary.600'),
-            '--tw-prose-pre-bg': theme('colors.white'),
-            '--tw-prose-th-borders': theme('colors.primary.600'),
-            '--tw-prose-td-borders': theme('colors.primary.600'),
-
-            '--tw-prose-invert-body': theme('colors.grey[200]'),
-            '--tw-prose-invert-headings': theme('colors.white'),
-            '--tw-prose-invert-lead': theme('colors.grey[300]'),
-            '--tw-prose-invert-links': theme('colors.white'),
-            '--tw-prose-invert-bold': theme('colors.white'),
-            '--tw-prose-invert-counters': theme('colors.grey[400]'),
-            '--tw-prose-invert-bullets': theme('colors.primary[500]'),
-            '--tw-prose-invert-hr': theme('colors.grey[600]'),
-            '--tw-prose-invert-quotes': theme('colors.grey[100]'),
-            '--tw-prose-invert-quote-borders': theme('colors.grey[600]'),
-            '--tw-prose-invert-captions': theme('colors.grey[400]'),
-            '--tw-prose-invert-code': theme('colors.white'),
-            '--tw-prose-invert-pre-code': theme('colors.grey[300]'),
-            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-            '--tw-prose-invert-th-borders': theme('colors.grey[600]'),
-            '--tw-prose-invert-td-borders': theme('colors.grey[600]'),
-          },
-        }
-      }),
     },
   },
-  safelist: [],
   future: {
     hoverOnlyWhenSupported: true,
   },
@@ -195,10 +155,10 @@ module.exports = {
 		// 	addComponents(components)
 		// }),
 
-    require("@tailwindcss/typography"),
+    // require("@tailwindcss/typography"),
 
     // https://github.com/tailwindlabs/tailwindcss-forms
-    // require("@tailwindcss/forms"),
+    require("@tailwindcss/forms"),
 
     // https://github.com/ThirusOfficial/tailwind-grid-auto-fit
     // require('@shrutibalasa/tailwind-grid-auto-fit'),
@@ -207,31 +167,31 @@ module.exports = {
     // require('@vivgui/tailwindcss-hyphens'),
 
 		// https://github.com/davidhellmann/tailwindcss-fluid-type
-		require('tailwindcss-fluid-type')({
-			settings: {
-				prefix: 'fl-', // set a prefix to use it alongside the default font sizes
-				ratioMin: 1.125, // Multiplicator Min
-				ratioMax: 1.2, // Multiplicator Max
-				screenMin: 20, // 20rem === 320px
-				screenMax: 96, // 96rem === 1536px
-				extendValues: true, // When you set extendValues to true it will extend the default values. Set it to false to overwrite the values.
-			},
-			// Font sizes without line-height as that is set in the base layer as a fluid line height.
-			values: {
-				'xs': [-2],
-				'sm': [-1],
-				'base': [0],
-				'lg': [1],
-				'xl': [2],
-				'2xl': [3],
-				'3xl': [4],
-				'4xl': [5],
-				'5xl': [6],
-				'6xl': [7],
-				'7xl': [8],
-				'8xl': [9],
-				'9xl': [10]
-			}
-		}),
+		// require('tailwindcss-fluid-type')({
+		// 	settings: {
+		// 		prefix: 'fl-', // set a prefix to use it alongside the default font sizes
+		// 		ratioMin: 1.125, // Multiplicator Min
+		// 		ratioMax: 1.2, // Multiplicator Max
+		// 		screenMin: 20, // 20rem === 320px
+		// 		screenMax: 96, // 96rem === 1536px
+		// 		extendValues: true, // When you set extendValues to true it will extend the default values. Set it to false to overwrite the values.
+		// 	},
+		// 	// Font sizes without line-height as that is set in the base layer as a fluid line height.
+		// 	values: {
+		// 		'xs': [-2],
+		// 		'sm': [-1],
+		// 		'base': [0],
+		// 		'lg': [1],
+		// 		'xl': [2],
+		// 		'2xl': [3],
+		// 		'3xl': [4],
+		// 		'4xl': [5],
+		// 		'5xl': [6],
+		// 		'6xl': [7],
+		// 		'7xl': [8],
+		// 		'8xl': [9],
+		// 		'9xl': [10]
+		// 	}
+		// }),
 	]
 };
