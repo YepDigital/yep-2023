@@ -21,41 +21,58 @@
 	animation: fadeIn 3000ms ease-out 500ms 1 normal both;
 } */
 
-@supports (animation-timeline: scroll()) {
-	@keyframes fadeOut {
-		from {
-			filter: saturate(1);
-			opacity: 0.75;
-		}
-		to {
-			filter: saturate(0);
-			opacity: 0;
-		}
-	}
-
-	@media screen(md) {
-		@keyframes fadeOut {
+@media (prefers-reduced-motion: no-preference) {
+	@supports (animation-timeline: scroll()) {
+		@keyframes imageOut {
 			from {
 				filter: saturate(1);
 				opacity: 0.75;
 			}
 			to {
 				filter: saturate(0);
-				opacity: 0.5;
+				opacity: 0;
+			}
+		}
+
+		@media screen(md) {
+			@keyframes imageOut {
+				from {
+					filter: saturate(1);
+					opacity: 0.75;
+				}
+				to {
+					filter: saturate(0);
+					opacity: 0.5;
+				}
+			}
+		}
+
+		#ryan {
+			animation: imageOut linear both;
+			animation-timeline: scroll(block);
+			animation-range: 0 theme(width.60);
+			view-timeline-axis: block;
+		}
+
+		@media screen(md) {
+			#ryan {
+				animation-range: 0 25vh;
 			}
 		}
 	}
 
-	#ryan {
-		animation: fadeOut linear both;
-		animation-timeline: scroll();
-		animation-range: 0 theme(width.60);
-		view-timeline-axis: block;
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
 	}
 
-	@media screen(md) {
-		#ryan {
-			animation-range: 0vh 20vh;
+	@media (prefers-reduced-motion: no-preference) {
+		.details,
+		.details li {
+			animation: fadeIn linear both;
+			animation-timeline: view(block);
+			animation-range: 20px 200px;
 		}
 	}
 }
