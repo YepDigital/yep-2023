@@ -26,7 +26,7 @@
 		@keyframes imageOut {
 			from {
 				filter: saturate(1);
-				opacity: 0.75;
+				opacity: 0.85;
 			}
 			to {
 				filter: saturate(0);
@@ -38,11 +38,11 @@
 			@keyframes imageOut {
 				from {
 					filter: saturate(1);
-					opacity: 0.75;
+					opacity: 0.85;
 				}
 				to {
 					filter: saturate(0);
-					opacity: 0.5;
+					opacity: 0.6;
 				}
 			}
 		}
@@ -78,6 +78,9 @@
 }
 
 @layer components {
+	.bg-sketch {
+		background-image: url(/assets/noise.png);
+	}
 	.linkify a {
 		@apply text-brand-base hover:text-white outline-0 duration-200;
 	}
