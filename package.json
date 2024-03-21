@@ -1,10 +1,10 @@
 {
   "name": "yep-digital",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Website of Yep Digital",
   "scripts": {
     "clean": "rimraf _site",
-    "build": "npm run clean && cross-env NODE_ENV=production eleventy",
+    "build": "npm run clean && cross-env NODE_ENV=production eleventy && npm run tw:build",
     "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
     "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy",
