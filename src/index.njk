@@ -3,9 +3,9 @@ layout: 'default'
 ---
 
 <picture class="bg-brand-950 fixed z-0 max-md:top-0 h-72 w-full md:right-0 md:inset-y-0 md:h-full md:w-1/2">
-	<img class="opacity-75 mix-blend-screen saturate-0 contrast-[1.1] object-cover object-[50%_15%] size-full" src="{{ '/assets/ryan.jpg' | url }}" alt="Ryan" id="ryan">
+	<source srcset="{{ '/assets/ryan.webp' | url }}" type="image/webp">
+	<img class="opacity-75 mix-blend-screen saturate-0 contrast-[1.1] object-cover object-[50%_15%] size-full" src="{{ '/assets/ryan.jpg' | url }}" alt="Ryan" id="ryan" fetchpriority="high">
 </picture>
-
 
 
 
