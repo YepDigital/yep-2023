@@ -81,34 +81,4 @@
 	.linkify a {
 		@apply text-brand-base hover:text-white outline-0 duration-200;
 	}
-
-	/* body {
-		background-image: url("/assets/noise.png");
-		background-attachment: fixed;
-	} */
-
-	.rocky {
-		display: none;
-	}
-
-	@media screen and (min-width: 2560px) {
-		.rocky {
-			display: block;
-			bottom: -0.5rem;
-			right: -0.5rem;
-			position: fixed;
-			width: 150px;
-
-			img {
-				transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
-				transition-delay: 700ms;
-			}
-
-			&:hover img {
-				transform: translateX(100%) translateY(60%);
-				transition-duration: 500ms;
-				transition-delay: 0ms;
-			}
-		}
-	}
 }
