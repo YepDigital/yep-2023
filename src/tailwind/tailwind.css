@@ -82,6 +82,6 @@
 		background-image: url(/assets/noise.png);
 	}
 	.linkify a {
-		@apply text-brand-base hover:text-white outline-0 duration-200;
+		@apply text-brand-500 hover:text-white outline-0 duration-200;
 	}
 }
