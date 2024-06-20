@@ -18,17 +18,17 @@ module.exports = {
     extend: {
       colors: {
 				'brand': {
-					50: "#F3F7FC",
-					100: "#E6F0FA",
-					200: "#C5DFF6",
-					300: "#A2CDF6",
-					400: "#73B7F7",
-					500: "#2898FF",
-					600: "#1888F2",
-					700: "#1576D1",
-					800: "#1963A9",
-					900: "#184672",
-					950: "#16314B"
+					50: '#F8FBFF',
+					100: '#D3E6FD',
+					200: '#8BBBF9',
+					300: '#4291F5',
+					400: '#0C69DF',
+					500: '#084796',
+					600: '#073B7E',
+					700: '#053066',
+					800: '#04254E',
+					900: '#031935',
+					950: '#021329'
 				},
 				'alt': {
 					50: "#FFF1F0",
@@ -112,10 +112,10 @@ module.exports = {
       fontSize: {
 				// Min/Max 20/21px (this does actually scale sub pixel)
         small: ['clamp(1rem, 0.909rem + 0.29vw, 1.375rem)', '1.4'],
-				// Min/Max 18/26px
-        default: ['clamp(1.125rem, 1.004rem + 0.39vw, 1.625rem)', '1.3'],
-				// Min/Max 22/34px
-        heading: ['clamp(1.375rem, 1.193rem + 0.58vw, 2.125rem)', '1.25'],
+				// Min/Max 16/24px
+        default: ['clamp(1rem, 0.879rem + 0.39vw, 1.5rem)', '1.4'],
+				// Min/Max 20/24px
+        heading: ['clamp(1.25rem, 1.129rem + 0.39vw, 1.75rem)', '1.3'],
       },
     },
   },
