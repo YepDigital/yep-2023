@@ -77,9 +77,9 @@
 }
 
 @layer components {
-	.bg-sketch {
+	/* .bg-sketch {
 		background-image: url(/assets/noise.png);
-	}
+	} */
 	.linkify a {
 		@apply font-bold text-white hover:text-brand-300 underline underline-offset-4 decoration-2 decoration-brand-300 hover:decoration-brand-500 outline-0 duration-200;
 	}

@@ -113,9 +113,9 @@ module.exports = {
 				// Min/Max 20/21px (this does actually scale sub pixel)
         small: ['clamp(1rem, 0.909rem + 0.29vw, 1.375rem)', '1.4'],
 				// Min/Max 16/24px
-        default: ['clamp(1rem, 0.879rem + 0.39vw, 1.5rem)', '1.4'],
+        default: ['clamp(1.125rem, 1.034rem + 0.29vw, 1.5rem)', '1.5'],
 				// Min/Max 20/24px
-        heading: ['clamp(1.25rem, 1.129rem + 0.39vw, 1.75rem)', '1.3'],
+        heading: ['clamp(1.375rem, 1.284rem + 0.29vw, 1.75rem)', '1.3'],
       },
     },
   },
