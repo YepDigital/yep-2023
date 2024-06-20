@@ -11,99 +11,61 @@
 {%- endset -%}
 
 <!DOCTYPE html>
-<html class="no-js scroll-smooth dark h-full" lang="en-GB" dir="ltr">
+<html class="no-js scroll-smooth scroll-m-8 h-[fill-available] text-brand-100 bg-brand-800" lang="en-GB" dir="ltr">
 
-	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>{{ metaTitle }}</title>
-    <meta name="title" content="{{ metaTitle }}">
-    <meta name="description" content="{{ metaDesc }}">
+	<title>{{ metaTitle }}</title>
+	<meta name="title" content="{{ metaTitle }}">
+	<meta name="description" content="{{ metaDesc }}">
 
-    <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
+	<link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
 
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}?cb=D0A40F9BCA0E">
+	<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}?cb=D0A40F9BCA0E">
 
-		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="{{ metaTitle }}">
-		<meta property="og:url" content="{{ site.url }}">
-		<meta property="og:title" content="{{ metaTitle }}">
-		<meta property="og:description"
-			content="{{ metaDesc }}">
-		<meta property="og:image" content="{{ '/assets/social-01.png' | url }}">
-		<meta property="og:image:secure_url" content="{{ '/assets/social-01.png' | url }}">
-		<meta property="og:image:width" content="1200">
-		<meta property="og:image:height" content="630">
-		<meta property="og:image:type" content="image/jpeg">
-		<meta property="og:locale" content="en">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="{{ metaTitle }}">
-		<meta name="twitter:description"
-			content="{{ metaDesc }}">
-		<meta name="twitter:url" content="{{ site.url }}">
-		<meta name="twitter:image" content="{{ '/assets/social-01.png' | url }}">
-		<link rel="icon" href="/favicon.ico">
-		{# <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicons/favicon.svg' | url }}"> #}
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | url }}">
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | url }}">
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | url }}">
-		<link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | url }}">
-		<link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg" color="{{ site.theme }}' | url }}">
-		<meta name="apple-mobile-web-app-title" content="{{ metaTitle }}">
-		<meta name="application-name" content="{{ metaTitle }}">
-		<meta name="msapplication-TileColor" content="{{ site.theme }}">
-		<meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="{{ metaTitle }}">
+	<meta property="og:url" content="{{ site.url }}">
+	<meta property="og:title" content="{{ metaTitle }}">
+	<meta property="og:description"
+		content="{{ metaDesc }}">
+	<meta property="og:image" content="{{ '/assets/social-01.png' | url }}">
+	<meta property="og:image:secure_url" content="{{ '/assets/social-01.png' | url }}">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:locale" content="en">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ metaTitle }}">
+	<meta name="twitter:description"
+		content="{{ metaDesc }}">
+	<meta name="twitter:url" content="{{ site.url }}">
+	<meta name="twitter:image" content="{{ '/assets/social-01.png' | url }}">
+	<link rel="icon" href="/favicon.ico">
+	{# <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicons/favicon.svg' | url }}"> #}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | url }}">
+	<link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | url }}">
+	<link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg" color="{{ site.theme }}' | url }}">
+	<meta name="apple-mobile-web-app-title" content="{{ metaTitle }}">
+	<meta name="application-name" content="{{ metaTitle }}">
+	<meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | url }}">
 
-		<meta name="theme-color" content="{{ site.theme }}">
+	<meta name="theme-color" content="#112c5a">
+</head>
 
-		<script>
-      let explicitelyPreferScheme = false
-      if (window.localStorage) {
-          if (localStorage.getItem('colorMode') === 'dark') {
-              document.documentElement.classList.add('dark')
-              explicitelyPreferScheme = 'dark'
-          } else if (localStorage.getItem('colorMode') === 'light') {
-              document.documentElement.classList.remove('dark')
-              explicitelyPreferScheme = 'light'
-          }
-      }
+<body>
 
-      if (explicitelyPreferScheme !== 'light' && window.matchMedia('(prefers-color-scheme:dark)').matches) {
-          document.documentElement.classList.add('dark')
-      }
-    </script>
+	<!-- Oh boy this is a mess, a complete rewrite from scratch is coming soon so I can stop being embarrassed at the state of it 🫣 -->
 
-    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  </head>
+	<main id="main-content">
+		{{ content | safe }}
+	</main>
 
-	<body class="bg-stone-200 dark:bg-zinc-900 text-stone-600 dark:text-zinc-300 selection:bg-brand-400 selection:text-brand-800 h-full">
-
-			{% include "partials/header.njk" %}
-
-			<main id="main-content">
-				{{ content | safe }}
-			</main>
-
-			<a class="sr-only" rel="me" href="https://mastodon.online/@yep">Mastodon</a>
-
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js"></script>
-    <script>
-      document.getElementById('fun').addEventListener('click', function (event) {
-        confetti({
-          particleCount: 100,
-          startVelocity: 30,
-          spread: 360,
-          origin: {
-            x: Math.random(),
-            // since they fall down, start a bit higher than random
-            y: Math.random() - 0.2
-          }
-        });
-      }) ;
-    </script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 {
   "name": "yep-digital",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Website of Yep Digital",
   "scripts": {
     "clean": "rimraf _site",
-    "build": "npm run clean && cross-env NODE_ENV=production eleventy",
+    "build": "npm run clean && cross-env NODE_ENV=production eleventy && npm run tw:build",
     "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
     "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy",
@@ -32,16 +32,17 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.10",
+		"@tailwindcss/forms": "^0.5.7",
     "cross-env": "^7.0.3",
-    "cssnano": "^6.0.1",
+    "cssnano": "^6.1.1",
     "html-minifier": "^4.0.0",
-    "luxon": "^3.3.0",
-    "postcss": "^8.4.23",
-    "postcss-import": "^15.1.0",
-    "postcss-preset-env": "^8.3.2",
-    "rimraf": "^5.0.0",
-    "tailwindcss": "^3.3.2",
+    "luxon": "^3.4.4",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-env": "^9.5.2",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.1",
     "tailwindcss-fluid-type": "^2.0.3"
   }
 }

@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const plugin = require('tailwindcss/plugin');
 const colors = require("tailwindcss/colors");
 const theme = require("tailwindcss/defaultTheme");
 
@@ -11,8 +10,7 @@ module.exports = {
     require('tailwindcss/defaultConfig'),
   ],
 	content: [
-		"./src/**/*.{njk,md,html}",
-		"!./src/tailwind",
+		"./src/**/*.{njk,md,html,css}",
 		"!./src/sitemap.xml.njk",
 		"!./src/robots.txt.njk",
 	],
@@ -20,16 +18,43 @@ module.exports = {
     extend: {
       colors: {
 				'brand': {
-					"50": "#FAF5F5",
-					"100": "#F4E7E6",
-					"200": "#EFCECC",
-					"300": "#EEADAA",
-					"400": "#F38781",
-					"500": "#FD6057",
-					"600": "#EB372D",
-					"700": "#BC2C24",
-					"800": "#802C28",
-					"900": "#4A2321"
+					50: '#F8FBFF',
+					100: '#D3E6FD',
+					200: '#8BBBF9',
+					300: '#4291F5',
+					400: '#0C69DF',
+					500: '#084796',
+					600: '#073B7E',
+					700: '#053066',
+					800: '#04254E',
+					900: '#031935',
+					950: '#021329'
+				},
+				'alt': {
+					50: "#FFF1F0",
+					100: "#FFDEDC",
+					200: "#FFC1BD",
+					300: "#FEA09A",
+					400: "#FE847B",
+					500: "#FE6157",
+					600: "#FE2516",
+					700: "#CB0F01",
+					800: "#890A01",
+					900: "#420500",
+					950: "#230300"
+				},
+				'tert': {
+					50: "#EFFAF5",
+					100: "#D8F3E7",
+					200: "#ADE6CC",
+					300: "#76D6AB",
+					400: "#3AC084",
+					500: "#2F9D6C",
+					600: "#2A8D61",
+					700: "#247A53",
+					800: "#1F6646",
+					900: "#154730",
+					950: "#103726"
 				},
         //--------------------------------------------------------------------------
         // Create a new colour class for body text to use anywhere
@@ -81,64 +106,19 @@ module.exports = {
       transitionTimingFunction: {
         DEFAULT: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
-      // Font sizes without line-height as that is set in the base layer as a fluid line height.
+			// Text sizes xl and above are fluid, max size is Tailwind's default sizes while the smallest is eyeballed to work well.
+			// Calculated using: https://min-max-calculator.9elements.com or https://royalfig.github.io/fluid-typography-calculator
+			// with Min/Max Viewports of 500/2560px
       fontSize: {
-        xs: '0.75rem',
-        sm: '0.875rem',
-        base: '1rem',
-        lg: '1.125rem',
-        xl: '1.25rem',
-        '2xl': '1.5rem',
-        '3xl': '1.875rem',
-        '4xl': '2.25rem',
-        '5xl': '3rem',
-        '6xl': '3.75rem',
-        '7xl': '4.5rem',
-        '8xl': '6rem',
-        '9xl': '8rem',
+				// Min/Max 20/21px (this does actually scale sub pixel)
+        small: ['clamp(1rem, 0.909rem + 0.29vw, 1.375rem)', '1.4'],
+				// Min/Max 16/24px
+        default: ['clamp(1rem, 0.879rem + 0.39vw, 1.5rem)', '1.4'],
+				// Min/Max 20/24px
+        heading: ['clamp(1.25rem, 1.129rem + 0.39vw, 1.75rem)', '1.3'],
       },
-      typography: ({ theme }) => ({
-        DEFAULT: {
-          css: {
-            '--tw-prose-body': theme('colors.primary.700'),
-            '--tw-prose-headings': theme('colors.primary.600'),
-            '--tw-prose-lead': theme('colors.primary.700'),
-            '--tw-prose-links': theme('colors.primary.500'),
-            '--tw-prose-bold': theme('colors.primary.700'),
-            '--tw-prose-counters': theme('colors.primary.500'),
-            '--tw-prose-bullets': theme('colors.primary.500'),
-            '--tw-prose-hr': theme('colors.primary.600'),
-            '--tw-prose-quotes': theme('colors.primary.600'),
-            '--tw-prose-quote-borders': theme('colors.primary.600'),
-            '--tw-prose-captions': theme('colors.primary.600'),
-            '--tw-prose-code': theme('colors.primary.600'),
-            '--tw-prose-pre-code': theme('colors.primary.600'),
-            '--tw-prose-pre-bg': theme('colors.white'),
-            '--tw-prose-th-borders': theme('colors.primary.600'),
-            '--tw-prose-td-borders': theme('colors.primary.600'),
-
-            '--tw-prose-invert-body': theme('colors.grey[200]'),
-            '--tw-prose-invert-headings': theme('colors.white'),
-            '--tw-prose-invert-lead': theme('colors.grey[300]'),
-            '--tw-prose-invert-links': theme('colors.white'),
-            '--tw-prose-invert-bold': theme('colors.white'),
-            '--tw-prose-invert-counters': theme('colors.grey[400]'),
-            '--tw-prose-invert-bullets': theme('colors.primary[500]'),
-            '--tw-prose-invert-hr': theme('colors.grey[600]'),
-            '--tw-prose-invert-quotes': theme('colors.grey[100]'),
-            '--tw-prose-invert-quote-borders': theme('colors.grey[600]'),
-            '--tw-prose-invert-captions': theme('colors.grey[400]'),
-            '--tw-prose-invert-code': theme('colors.white'),
-            '--tw-prose-invert-pre-code': theme('colors.grey[300]'),
-            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-            '--tw-prose-invert-th-borders': theme('colors.grey[600]'),
-            '--tw-prose-invert-td-borders': theme('colors.grey[600]'),
-          },
-        }
-      }),
     },
   },
-  safelist: [],
   future: {
     hoverOnlyWhenSupported: true,
   },
@@ -174,10 +154,10 @@ module.exports = {
 		// 	addComponents(components)
 		// }),
 
-    require("@tailwindcss/typography"),
+    // require("@tailwindcss/typography"),
 
     // https://github.com/tailwindlabs/tailwindcss-forms
-    // require("@tailwindcss/forms"),
+    require("@tailwindcss/forms"),
 
     // https://github.com/ThirusOfficial/tailwind-grid-auto-fit
     // require('@shrutibalasa/tailwind-grid-auto-fit'),
@@ -186,31 +166,31 @@ module.exports = {
     // require('@vivgui/tailwindcss-hyphens'),
 
 		// https://github.com/davidhellmann/tailwindcss-fluid-type
-		require('tailwindcss-fluid-type')({
-			settings: {
-				prefix: 'fl-', // set a prefix to use it alongside the default font sizes
-				ratioMin: 1.125, // Multiplicator Min
-				ratioMax: 1.2, // Multiplicator Max
-				screenMin: 20, // 20rem === 320px
-				screenMax: 96, // 96rem === 1536px
-				extendValues: true, // When you set extendValues to true it will extend the default values. Set it to false to overwrite the values.
-			},
-			// Font sizes without line-height as that is set in the base layer as a fluid line height.
-			values: {
-				'xs': [-2],
-				'sm': [-1],
-				'base': [0],
-				'lg': [1],
-				'xl': [2],
-				'2xl': [3],
-				'3xl': [4],
-				'4xl': [5],
-				'5xl': [6],
-				'6xl': [7],
-				'7xl': [8],
-				'8xl': [9],
-				'9xl': [10]
-			}
-		}),
+		// require('tailwindcss-fluid-type')({
+		// 	settings: {
+		// 		prefix: 'fl-', // set a prefix to use it alongside the default font sizes
+		// 		ratioMin: 1.125, // Multiplicator Min
+		// 		ratioMax: 1.2, // Multiplicator Max
+		// 		screenMin: 20, // 20rem === 320px
+		// 		screenMax: 96, // 96rem === 1536px
+		// 		extendValues: true, // When you set extendValues to true it will extend the default values. Set it to false to overwrite the values.
+		// 	},
+		// 	// Font sizes without line-height as that is set in the base layer as a fluid line height.
+		// 	values: {
+		// 		'xs': [-2],
+		// 		'sm': [-1],
+		// 		'base': [0],
+		// 		'lg': [1],
+		// 		'xl': [2],
+		// 		'2xl': [3],
+		// 		'3xl': [4],
+		// 		'4xl': [5],
+		// 		'5xl': [6],
+		// 		'6xl': [7],
+		// 		'7xl': [8],
+		// 		'8xl': [9],
+		// 		'9xl': [10]
+		// 	}
+		// }),
 	]
 };

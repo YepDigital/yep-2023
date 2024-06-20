@@ -1,22 +1,22 @@
 ---
-layout: subpage
+layout: default
 title: Page Not Found
 permalink: 404.html
 eleventyExcludeFromCollections: true
 ---
 
-<section class="container flex flex-wrap min-h-[78vh] md:min-h-[85vh] lg:min-h-[88vh]">
-	<div class="scroll-mt-16 md:scroll-mt-20 lg:scroll-mt-32 pt-32 lg:pt-48 xl:pt-64 2xl:pt-80 grid grid-cols-12 gap-4 md:gap-8 self-end">
+<div class="md:rounded-lg bg-brand-900/50 overflow-hidden fixed z-0 max-md:top-0 h-72 w-full md:left-4 md:inset-y-4 md:h-[calc(100%-2rem)] md:w-[calc(50%-2rem)]">
+</div>
 
-		<h2 class="font-semibold tracking-tighter md:tracking-tight md:opacity-50 text-3xl md:text-4xl col-span-full md:col-span-5 ">
-			<span class="md:sticky md:top-32 xl:top-44">404</span>
-		</h2>
+<div class="bg-sketch bg-fixed bg-brand-800 relative z-10 w-full max-md:mt-72 p-6 pb-24 lg:p-12 lg:pb-48 md:w-1/2 md:ml-auto text-default tracking-[0.0125em] linkify [&_p]:max-w-[50ch] text-pretty" id="about">
 
-		<div class="col-span-11 md:col-span-6 md:pt-1 body-copy">
-			<p><strong>Oops! It looks like you're lost.</strong></p>
-			<p>The page you're looking for might have been removed had its name changed or is temporarily unavailable.</p>
+	<header class="relative after:block after:pb-[clamp(8rem,-14rem+50vh,40rem)] lg:after:pb-[clamp(8rem,-14rem+58svh,40rem)]">
+		<h1 class="sticky top-6 lg:top-12 pb-4 lg:pb-12 font-bold tracking-[-0.0125em] text-white text-heading">Page Not Found</h1>
+	</header>
 
-			<a href="{{ '/' | url }}">Return to homepage</a>
-		</div>
+	<div class="details space-y-8">
+		<p>The page you're looking for might have been removed had its name changed or is temporarily unavailable.</p>
+
+		<p><a class="!no-underline" href="/">← Home</a></p>
 	</div>
-</section>
+</div>

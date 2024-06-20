@@ -1,407 +1,60 @@
 ---
-layout: default
+layout: 'default'
 ---
 
-		<section class="container lg:pb-12 xl:pb-20 flex flex-wrap min-h-[78vh] md:min-h-[85vh] lg:min-h-[88vh]">
-			<div
-				class="scroll-mt-16 md:scroll-mt-20 lg:scroll-mt-32 pt-32 lg:pt-48 xl:pt-64 2xl:pt-80 grid grid-cols-12 gap-4 md:gap-8 self-end"
-				id="about">
-				<h2 class="
-heading
-sr-only
-md:not-sr-only
-md:col-span-5
-lg:col-span-6
-flex
-items-end
-!leading-[0.85]
-">
-					About<span class="sr-only"> Yep Digital</span></h2>
-				<p class="
-text-lg
-sm:text-xl
-col-span-full
-sm:col-span-11
-lg:text-2xl
-lg:leading-9
-md:col-span-6
-md:pt-3
-lg:col-span-5
-xl:col-span-6
-xl:pt-6
-xl:pr-8
-2xl:text-3xl
-2xl:leading-10
-">
-					I’m Ryan, a freelance web developer focused on designing, building and hosting websites for companies
-					throughout Scotland. After working for the better part of 20 years in the north east design industry, I know
-					what's needed to help companies build the best web solutions to fit their budget and technical requirements.
-				</p>
-			</div>
-		</section>
-		<div
-			class="invert mix-blend-multiply dark:invert-0 dark:mix-blend-lighten opacity-40 lg:h-auto h-96 lg:pb-8 w-full overflow-hidden">
-			<picture>
-				<source srcset="/assets/sketch-04.webp" type="image/webp">
-				<img class="object-cover w-full h-full" src="/assets/sketch-04.jpg" alt="Website wireframe paper sketches">
-			</picture>
-		</div>
-		<section class="container" id="clients">
-			<div class="md:grid-cols-12 grid gap-y-4 gap-x-8">
-				<h2 class="heading col-span-full md:col-span-5 lg:col-span-6">
-					<div class="md:sticky md:top-32 xl:top-44">Clients</div>
-				</h2>
-				<ul class="
-space-y-4
-text-xl
-lg:text-2xl
-lg:leading-9
-md:col-span-6
-md:pt-3
-lg:col-span-5
-2xl:text-3xl
-2xl:leading-10
-">
-					<li>
-						North East Adventure Tourism</li>
-					<li>
-					<li>
-						Progressive Pathways Ltd</li>
-					<li>
-					<li>
-						Developing Mountain Biking in Scotland</li>
-					<li>
-						Scottish Mountain Bike Tourism</li>
-					<li>
-						Prosource IT</li>
-					<li>
-						The Garioch Partnership</li>
-					<li>
-						Hiretech Rentals</li>
-					<li>
-						BetaHR</li>
-					<li>
-						Diversity Energy</li>
-					<li>
-						Bare — Sustainable Living</li>
-					<li>
-						The Gaff</li>
-					<li>
-						MAX</li>
-					<li>
-						Grampian Campervan Hire</li>
-					<li>
-						Steer Energy</li>
-					<li>
-						HayReid</li>
-					<li>
-						Fraserburgh Engineering</li>
-					<li>
-						FortyTwo Studio</li>
-					<li>
-						Halfpenny Animal Sanctuary</li>
-				</ul>
-			</div>
-		</section>
-		<div class="container" id="info">
-			<section class="md:grid-cols-12 grid gap-x-8">
-				<h2 class="
-heading
-col-span-full
-md:-ml-1
-md:col-span-3
-lg:-ml-2
-">
-					<div class="pb-4 lg:pb-0 md:sticky md:top-32 xl:top-44">Info</div>
-				</h2>
-				<div x-data="{ active: 0 }" id="accordionGroup" class="
-border-t
-dark:border-zinc-800
-border-stone-300
-text-xl
-col-span-full
-lg:text-2xl
-lg:leading-9
-md:col-span-9
-md:col-start-4
-md:border-0
-lg:col-span-8
-lg:col-start-5
-xl:pt-3
-xl:col-start-4
-2xl:text-3xl
-2xl:leading-10
-2xl:col-span-7
-2xl:col-start-5
-">
-					<dl x-data="{
-id: 1,
-get expanded() {
-return this.active === this.id;
-},
-set expanded(value) {
-this.active = value ? this.id : null;
-}
-}" class="
-scroll-mt-20
-md:scroll-mt-32
-lg:scroll-mt-64
-border-stone-300
-dark:border-zinc-800
-duration-300
-border-b
-" x-ref="accordion1">
-						<dt class="group relative flex items-center">
-							<button @click="expanded = !expanded;" class="
-md:py-6
-focus:outline-none
-hover:text-brand-500
-focus:text-brand-500
-w-full
-py-4
-pl-8
-text-left
-duration-300
-outline-none
-font-medium
-" :class="expanded ? 'text-brand-500' : ''" :aria-expanded="expanded" aria-controls="accordion-panel-1" tabindex="0"
-								id="accordion-tab-1">
-								How much does a website cost?
-							</button><svg :class="expanded ? 'rotate-45 text-brand-500' : 'rotate-180'"
-								class="group-hover:text-brand-500 h-6 w-6 duration-300 absolute left-0"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-								stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-							</svg>
-						</dt>
-						<dd x-show="expanded" x-collapse.duration.400ms x-cloak id="accordion-panel-1" role="region"
-							aria-labelledby="accordion-tab-1">
-							<div class="
-pb-16
-pl-8
-max-w-2xl
-xl:max-w-screen-md
-col-span-11
-body-copy
-">
-								<p>To provide an accurate estimate, I’ll need to know more about your specific needs, budget, and timeline. Think of it like buying a car - the price can vary greatly depending on the make and model, features, and your budget. The more information you can provide me with, the better I can tailor a solution that meets your needs and fits within your budget. Rest assured, I’ll work closely with you to find a solution that works for you.</p>
-								<p><a href="#contact">Get in touch</a> to kick things off.</p>
-							</div>
-						</dd>
-					</dl>
-					<dl x-data="{
-id: 2,
-get expanded() {
-return this.active === this.id;
-},
-set expanded(value) {
-this.active = value ? this.id : null;
-}
-}" class="
-scroll-mt-20
-md:scroll-mt-32
-lg:scroll-mt-64
-border-stone-300
-dark:border-zinc-800
-duration-300
-border-b
-" x-ref="accordion2">
-						<dt class="group relative flex items-center">
-							<button @click="expanded = !expanded;" class="
-md:py-6
-focus:outline-none
-hover:text-brand-500
-focus:text-brand-500
-w-full
-py-4
-pl-8
-text-left
-duration-300
-outline-none
-font-medium
-" :class="expanded ? 'text-brand-500' : ''" :aria-expanded="expanded" aria-controls="accordion-panel-2" tabindex="0"
-								id="accordion-tab-2">
-								Can I see some work?
-							</button><svg :class="expanded ? 'rotate-45 text-brand-500' : 'rotate-180'"
-								class="group-hover:text-brand-500 h-6 w-6 duration-300 absolute left-0"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-								stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-							</svg>
-						</dt>
-						<dd x-show="expanded" x-collapse.duration.400ms x-cloak id="accordion-panel-2" role="region"
-							aria-labelledby="accordion-tab-2">
-							<div class="
-pb-16
-pl-8
-max-w-2xl
-xl:max-w-screen-md
-col-span-11
-body-copy
-">
-								<p>For the time being please <a href="#contact">email me</a> and I'll share some recent work.</p>
-							</div>
-						</dd>
-					</dl>
-					<dl x-data="{
-id: 3,
-get expanded() {
-return this.active === this.id;
-},
-set expanded(value) {
-this.active = value ? this.id : null;
-}
-}" class="
-scroll-mt-20
-md:scroll-mt-32
-lg:scroll-mt-64
-border-stone-300
-dark:border-zinc-800
-duration-300
-border-b
-" x-ref="accordion3">
-						<dt class="group relative flex items-center">
-							<button @click="expanded = !expanded;" class="
-md:py-6
-focus:outline-none
-hover:text-brand-500
-focus:text-brand-500
-w-full
-py-4
-pl-8
-text-left
-duration-300
-outline-none
-font-medium
-" :class="expanded ? 'text-brand-500' : ''" :aria-expanded="expanded" aria-controls="accordion-panel-3" tabindex="0"
-								id="accordion-tab-3">
-								Do you do X or Y?
-							</button><svg :class="expanded ? 'rotate-45 text-brand-500' : 'rotate-180'"
-								class="group-hover:text-brand-500 h-6 w-6 duration-300 absolute left-0"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-								stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-							</svg>
-						</dt>
-						<dd x-show="expanded" x-collapse.duration.400ms x-cloak id="accordion-panel-3" role="region"
-							aria-labelledby="accordion-tab-3">
-							<div class="
-pb-16
-pl-8
-max-w-2xl
-xl:max-w-screen-md
-col-span-11
-body-copy
-">
-								<p>While I specialize in web development and design, I understand that a successful project often requires a range of complementary services. That’s why I partner with a talented network of freelancers who offer a variety of skills and expertise, including marketing, copywriting, social media, photography, software development, print design, brand development, and more. By collaborating with these specialists, I can ensure that your project receives the attention and expertise it deserves, while allowing me to focus on what I do best.</p>
-							</div>
-						</dd>
-					</dl>
-					<dl x-data="{
-id: 4,
-get expanded() {
-return this.active === this.id;
-},
-set expanded(value) {
-this.active = value ? this.id : null;
-}
-}" class="
-scroll-mt-20
-md:scroll-mt-32
-lg:scroll-mt-64
-border-stone-300
-dark:border-zinc-800
-duration-300
-border-b
-" x-ref="accordion4">
-						<dt class="group relative flex items-center">
-							<button @click="expanded = !expanded;" class="
-md:py-6
-focus:outline-none
-hover:text-brand-500
-focus:text-brand-500
-w-full
-py-4
-pl-8
-text-left
-duration-300
-outline-none
-font-medium
-" :class="expanded ? 'text-brand-500' : ''" :aria-expanded="expanded" aria-controls="accordion-panel-4" tabindex="0"
-								id="accordion-tab-4">
-								What do you create sites with?
-							</button><svg :class="expanded ? 'rotate-45 text-brand-500' : 'rotate-180'"
-								class="group-hover:text-brand-500 h-6 w-6 duration-300 absolute left-0"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-								stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-							</svg>
-						</dt>
-						<dd x-show="expanded" x-collapse.duration.400ms x-cloak id="accordion-panel-4" role="region"
-							aria-labelledby="accordion-tab-4">
-							<div class="
-pb-16
-pl-8
-max-w-2xl
-xl:max-w-screen-md
-col-span-11
-body-copy
-">
-								<p>I'm a huge fan of <a href="https://craftcms.com" class="text-[#d54f33]" target="_blank"
-										rel="noreferrer noopener">Craft CMS</a> when a content management system is required (usually),
-									otherwise I'll build static sites with as simple a ”stack” as possible compiled with Node. On the
-									frontend I use <a href="https://tailwindcss.com/" class="text-[#5ebcf4]" target="_blank"
-										rel="noreferrer noopener">Tailwind CSS</a>, <a href="https://alpinejs.dev/" target="_blank"
-										rel="noreferrer noopener">Alpine.js</a> and Twig whether it's a Craft or static build. These are the
-									<a href="https://browserslist.dev/?q=bGFzdCA0IHZlcnNpb25zLCA%2BPSAwLjUlLCBGaXJlZm94IEVTUiwgIG5vdCBkZWFk"
-										target="_blank" rel="noreferrer noopener">browsers I support</a> by default.</p>
-							</div>
-						</dd>
-					</dl>
-					<dl x-data="{
-							id: 5,
-							get expanded() {
-							return this.active === this.id;
-							},
-							set expanded(value) {
-							this.active = value ? this.id : null;
-							}
-							}
-						"
- 						class="scroll-mt-20 md:scroll-mt-32 lg:scroll-mt-64 border-stone-300 dark:border-zinc-800 duration-300 border-b"
-						x-ref="accordion5">
-						<dt class="group relative flex items-center">
-							<button @click="expanded = !expanded;" class="md:py-6 focus:outline-none hover:text-brand-500 focus:text-brand-500 w-full py-4 pl-8 text-left duration-300 outline-none font-medium" :class="expanded ? 'text-brand-500' : ''" :aria-expanded="expanded" aria-controls="accordion-panel-5" tabindex="0"
-								id="accordion-tab-5">
-								Where are you based?
-							</button><svg :class="expanded ? 'rotate-45 text-brand-500' : 'rotate-180'"
-								class="group-hover:text-brand-500 h-6 w-6 duration-300 absolute left-0"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
-								stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-							</svg>
-						</dt>
-						<dd x-show="expanded" x-collapse.duration.400ms x-cloak id="accordion-panel-5" role="region"
-							aria-labelledby="accordion-tab-5">
-							<div class="pb-16 pl-8 max-w-2xl xl:max-w-screen-md col-span-11 body-copy">
-								<p>Sunny <a href="https://www.visitabdn.com/plan-your-trip/towns-villages/kintore/" target="_blank"
-										rel="noreferrer noopener">Kintore</a> in Aberdeenshire.</p>
-							</div>
-						</dd>
-					</dl>
-				</div>
-			</section>
-		</div>
+<picture class="md:rounded-lg overflow-hidden fixed z-0 max-md:top-0 h-72 w-full md:left-4 md:inset-y-4 md:h-[calc(100%-2rem)] md:w-[calc(50%-2rem)]">
+	<source media="(max-width: 640px)" srcset="{{ '/assets/ryan-small.webp' | url }}" type="image/webp">
+	<source media="(max-width: 640px)" srcset="{{ '/assets/ryan-small.jpg' | url }}">
 
+	<source media="(max-width: 1023px)" srcset="{{ '/assets/ryan-medium.webp' | url }}" type="image/webp">
+	<source media="(max-width: 1023px)" srcset="{{ '/assets/ryan-medium.jpg' | url }}">
 
-		<section
-			class="container bg-contain bg-no-repeat bg-center lg:pb-44 pb-24 min-h-[85vh] grid place-items-center !scroll-mt-0"
-			id="contact" style="background-image: url(/assets/ccchaos-01.png)">
-			<h2 class="sr-only">Contact Yep Digital</h2>
-			<p class="heading text-center opacity-100 pt-12 sm:pt-10 lg:pt-12">
-				<span class="sr-only">
-					Email Ryan
-				</span>
-				<a class="block outline-none text-brand-500 decoration-transparent hover:decoration-stone-300 focus:decoration-stone-300 dark:hover:decoration-zinc-200 dark:focus:decoration-zinc-200 underline duration-200" href="mailto:ryan@yep.digital">ryan@yep.digital</a>
-			</p>
-		</section>
+	<source media="(min-width: 1024px)" srcset="{{ '/assets/ryan-max.webp' | url }}" type="image/webp">
+	<source media="(min-width: 1024px)" srcset="{{ '/assets/ryan-max.jpg' | url }}">
+
+	<img src="{{ '/assets/ryan-md.jpg' | url }}" class="opacity-85 object-cover object-[50%_15%] size-full" alt="It's a me, Ryan!" id="ryan" fetchpriority="high" width="2880" height="2880">
+</picture>
+
+<div class="bg-sketch bg-fixed bg-brand-800 relative z-10 w-full max-md:mt-72 p-6 pb-24 lg:p-12 lg:pb-48 md:w-1/2 md:ml-auto text-default tracking-[0.0125em] linkify [&_p]:max-w-[50ch] text-pretty" id="about">
+
+	<header class="relative after:block after:pb-[clamp(8rem,-14rem+50vh,40rem)] lg:after:pb-[clamp(8rem,-14rem+58svh,40rem)]">
+		<h1 class="sticky top-6 lg:top-12 pb-4 lg:pb-12 font-bold tracking-[-0.0125em] text-white text-heading">Yep Digital</h1>
+	</header>
+
+	<div class="details space-y-8">
+		<p>I’m Ryan, a freelance web developer based in the North-East of Scotland. With 20 years of experience, I specialise in creating websites that drive results for businesses of all sizes, from startups to large organisations. I focus on creating what matters most—a website that looks great, drives results, and works for your customers.</p>
+
+		<p>Since establishing Yep Digital in 2019, I’ve had the privilege of working with a diverse range of clients across many industries, including:</p>
+	</div>
+
+	<ul class="details pt-8 space-y-2 font-bold text-white">
+		<li>BetaHR</li>
+		<li>Bough Studio</li>
+		<li>COPA Resourcing Group</li>
+		<li>CRC</li>
+		<li>Developing Mountain Biking in Scotland</li>
+		<li>Diversity Energy</li>
+		<li>Evoke Marketing</li>
+		<li>FortyTwo Studio</li>
+		<li>The Garioch Partnership</li>
+		<li>Grampian Campervan Hire</li>
+		<li>HydroVolve</li>
+		<li>IDT-Innovar</li>
+		<li>Kinetic Renewable Services</li>
+		<li>North East Adventure Tourism</li>
+		<li>Progressive Pathways</li>
+		<li>Prosource IT</li>
+		<li>Scotia Financial Solutions</li>
+		<li>Scottish Mountain Bike Tourism</li>
+		<li>Steer Energy</li>
+		<li>We Are Max</li>
+	</ul>
+
+	<div class="details pt-4 mt-16 border-t-4 border-white/10 space-y-2">
+		<h2 class="text-heading font-bold tracking-[-0.0125em] text-white">Let’s Talk</h2>
+		<p>If you’re interested, email me at <a href="mailto:ryan@yep.digital">ryan@yep.digital</a>. Let’s discuss your project and how I can help you achieve your goals.</p>
+
+		<h2 class="pt-8 text-heading font-bold bold-[-0.0125em] text-white">Agencies & Designers</h2>
+		<p>I also collaborate with agencies and designers. If you're looking for a developer to bring your creative vision to life, <a href="mailto:ryan@yep.digital">get in touch</a> and let’s have a chat.</p>
+	</div>
+</div>
