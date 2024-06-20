@@ -23,7 +23,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
 	@supports (animation-timeline: scroll()) {
-		@keyframes imageOut {
+		/* @keyframes imageOut {
 			from {
 				filter: saturate(1);
 				opacity: 0.85;
@@ -58,7 +58,7 @@
 			#ryan {
 				animation-range: 0 25vh;
 			}
-		}
+		} */
 	}
 
 	@keyframes fadeIn {
