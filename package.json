@@ -8,7 +8,6 @@
     "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
     "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy",
-
     "tw:dev": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css",
     "tw:watch": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --watch",
     "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify"
@@ -31,9 +30,8 @@
   ],
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^2.0.1",
+    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
-		"@tailwindcss/forms": "^0.5.7",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.3",
     "html-minifier": "^4.0.0",

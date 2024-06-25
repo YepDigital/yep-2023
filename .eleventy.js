@@ -1,4 +1,3 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
 
@@ -18,8 +17,6 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
-
-  eleventyConfig.addPlugin(pluginRss);
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
