@@ -23,8 +23,7 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
-  eleventyConfig.addLayoutAlias('subpage', 'layouts/subpage.njk');
+  eleventyConfig.addLayoutAlias('default', 'default.njk');
 
   // Add shortlink redirects
   // https://www.raymondcamden.com/2021/06/22/dynamic-short-urls-with-eleventy
@@ -38,6 +37,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: 'src',
+			includes: "_includes",
+			layouts: "_layouts",
     },
     templateFormats: ['md', 'njk', 'html'],
     dataTemplateEngine: 'njk',
