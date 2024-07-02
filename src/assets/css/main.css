@@ -1042,6 +1042,14 @@ select {
   width: 100%;
 }
 
+.max-w-\[70ch\] {
+  max-width: 70ch;
+}
+
+.max-w-\[65ch\] {
+  max-width: 65ch;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1402,6 +1410,10 @@ select {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-12 {
@@ -1984,16 +1996,6 @@ select {
   .hover\:decoration-brand-500:hover {
     text-decoration-color: #084796;
   }
-
-  .hover\:opacity-100:hover {
-    opacity: 1;
-  }
-
-  .hover\:saturate-100:hover {
-    --tw-saturate: saturate(1);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) saturate(1) var(--tw-sepia) var(--tw-drop-shadow);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
 }
 
 @media not all and (min-width: 768px) {
@@ -2024,10 +2026,6 @@ select {
     margin-left: auto;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:h-12 {
     height: 3rem;
   }
@@ -2047,15 +2045,6 @@ select {
   .md\:rounded-lg {
     border-radius: 0.5rem;
   }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .md\:pt-12 {
-    padding-top: 3rem;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -2065,10 +2054,6 @@ select {
 
   .lg\:mb-12 {
     margin-bottom: 3rem;
-  }
-
-  .lg\:h-14 {
-    height: 3.5rem;
   }
 
   .lg\:p-12 {
@@ -2083,49 +2068,16 @@ select {
     padding-bottom: 12rem;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .lg\:after\:pb-\[clamp\(8rem\2c -14rem\+58svh\2c 40rem\)\]::after {
     content: var(--tw-content);
     padding-bottom: clamp(8rem,-14rem + 58svh,40rem);
   }
 }
 
-@media (min-width: 1280px) {
-  .xl\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .xl\:pt-24 {
-    padding-top: 6rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:font-normal {
-    font-weight: 400;
-  }
-
-  .dark\:text-zinc-500 {
-    color: #71717a;
-  }
-
-  @media (min-width: 768px) {
-    .dark\:md\:font-normal {
-      font-weight: 400;
-    }
-  }
-}
-
 .\[\&_p\]\:max-w-\[50ch\] p {
   max-width: 50ch;
+}
+
+.\[\&_p\]\:max-w-\[70ch\] p {
+  max-width: 70ch;
 }

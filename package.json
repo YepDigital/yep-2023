@@ -23,19 +23,18 @@
   },
   "homepage": "https://github.com/YepDigital/yep-2023#readme",
   "browserlisturl": "https://browserslist.dev",
+  "browserlistquery": "https://browsersl.ist/#q=%3E1%25%2C+last+3+major+version%2C+Firefox+ESR%2C+not+dead",
   "browserslist": [
-    "last 5 versions",
-    ">= 1%",
+    "> 1%",
+    "last 3 major versions",
+    "Firefox ESR",
     "not dead"
   ],
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.13",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.3",
     "html-minifier": "^4.0.0",
-    "luxon": "^3.4.4",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-preset-env": "^9.5.14",

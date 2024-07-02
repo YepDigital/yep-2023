@@ -1,4 +1,3 @@
-const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
