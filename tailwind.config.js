@@ -87,7 +87,7 @@ module.exports = {
         //   ...theme.fontFamily.sans,
         // ],
         sans: [
-					'Manrope',
+					'Interphases',
 					...theme.fontFamily.sans
 				],
         serif: [
@@ -157,7 +157,7 @@ module.exports = {
     // require("@tailwindcss/typography"),
 
     // https://github.com/tailwindlabs/tailwindcss-forms
-    require("@tailwindcss/forms"),
+    // require("@tailwindcss/forms"),
 
     // https://github.com/ThirusOfficial/tailwind-grid-auto-fit
     // require('@shrutibalasa/tailwind-grid-auto-fit'),

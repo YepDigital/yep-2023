@@ -1,8 +1,18 @@
-@font-face {
+/* @font-face {
   font-family: 'Manrope';
   src: url('/fonts/manrope/Manrope[wght].woff2') format('woff2'),
        url('/fonts/manrope/Manrope[wght].ttf') format('truetype');
        font-weight: 200 800;
+       font-display: swap;
+       font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Interphases';
+  src: url('/fonts/interphases/TT_Interphases_Pro_Variable.woff2') format('woff2'),
+       url('/fonts/interphases/TT_Interphases_Pro_Variable.woff') format('woff'),
+       url('/fonts/interphases/TT_Interphases_Pro_Variable.ttf') format('truetype');
+       font-weight: 100 900;
        font-display: swap;
        font-style: normal;
 }
