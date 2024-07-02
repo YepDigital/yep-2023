@@ -35,9 +35,9 @@
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.3",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.39",
     "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^9.5.14",
+    "postcss-preset-env": "^9.5.15",
     "rimraf": "^5.0.7",
     "tailwindcss": "^3.4.4",
     "tailwindcss-fluid-type": "^2.0.6"
