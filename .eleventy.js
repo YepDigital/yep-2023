@@ -1,4 +1,5 @@
 const htmlmin = require("html-minifier");
+const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
 module.exports = function(eleventyConfig) {
 
@@ -18,6 +19,8 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addLayoutAlias('default', 'default.njk');
+
+	eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
   return {
     dir: {
