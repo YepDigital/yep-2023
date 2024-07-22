@@ -87,8 +87,8 @@ module.exports = {
         //   ...theme.fontFamily.sans,
         // ],
         sans: [
-					'Interphases',
-					...theme.fontFamily.sans
+					['Interphases', ...theme.fontFamily.sans],
+					{fontVariationSettings: "'slnt' 0"}
 				],
         serif: [
           // 'Lavigne',
