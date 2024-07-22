@@ -11,7 +11,7 @@
     "tw:dev": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css",
     "tw:watch": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --watch",
     "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify",
-		"start": "concurrently \"npm run serve\" \"npm run tw:watch\""
+    "start": "concurrently \"npm run serve\" \"npm run tw:watch\""
   },
   "repository": {
     "type": "git",
@@ -35,13 +35,13 @@
     "@11ty/eleventy": "^2.0.1",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
-    "cssnano": "^7.0.3",
+    "cssnano": "^7.0.4",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.39",
     "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^9.5.15",
+    "postcss-preset-env": "^9.6.0",
     "rimraf": "^5.0.7",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.6",
     "tailwindcss-fluid-type": "^2.0.6"
   }
 }
