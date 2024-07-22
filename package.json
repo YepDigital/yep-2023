@@ -11,7 +11,8 @@
     "tw:dev": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css",
     "tw:watch": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --watch",
     "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify",
-    "start": "concurrently \"npm run serve\" \"npm run tw:watch\""
+    "start": "concurrently \"npm run serve\" \"npm run tw:watch\"",
+    "prep": "concurrently \"npm run build\" \"npm run tw:build\""
   },
   "repository": {
     "type": "git",
