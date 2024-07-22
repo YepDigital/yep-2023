@@ -13,6 +13,7 @@
   font-weight: 100 900;
   font-stretch: 100%;
   font-display: swap;
+	font-variation-settings: 'wght' 400, 'wdth' 100%, 'slnt' 0;
   src: url('/fonts/interphases/TT_Interphases_Pro_Variable.woff2') format('woff2'),
 			 url('/fonts/interphases/TT_Interphases_Pro_Variable.woff') format('woff'),
 			 url('/fonts/interphases/TT_Interphases_Pro_Variable.ttf') format('truetype');

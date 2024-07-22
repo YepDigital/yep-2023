@@ -87,7 +87,7 @@ module.exports = {
         //   ...theme.fontFamily.sans,
         // ],
         sans: [
-					'Manrope',
+					'Interphases',
 					...theme.fontFamily.sans
 				],
         serif: [

@@ -10,7 +10,8 @@
     "debug": "DEBUG=* npx @11ty/eleventy",
     "tw:dev": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css",
     "tw:watch": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --watch",
-    "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify"
+    "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify",
+		"start": "concurrently \"npm run serve\" \"npm run tw:watch\""
   },
   "repository": {
     "type": "git",
