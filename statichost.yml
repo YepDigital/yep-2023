@@ -1,0 +1,13 @@
+# FILENAME: statichost.yml
+# Docker image to use for building
+image: node:22
+# Build command
+command: "npm ci && npm run build && npm run tw:build"
+# Public directory
+public: _site
+# Domains
+domains:
+  # Primary domain
+  - yep.digital
+  # Domains that redirect to the primary
+  - www.yep.digital
