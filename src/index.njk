@@ -3,16 +3,27 @@ layout: 'default'
 ---
 
 <picture class="md:rounded-lg overflow-hidden fixed z-0 max-md:top-0 h-[50svh] w-full md:left-4 md:inset-y-4 md:h-[calc(100%-2rem)] md:w-[calc(50%-2rem)]">
-	<source media="(max-width: 640px)" srcset="{{ '/assets/ryan-small.webp' | url }}" type="image/webp">
-	<source media="(max-width: 640px)" srcset="{{ '/assets/ryan-small.jpg' | url }}">
+	<source media="(max-width: 639px)" srcset="{{ '/assets/ryan-small.webp' | url }}" type="image/webp">
+	<source media="(max-width: 639px)" srcset="{{ '/assets/ryan-small.jpg' | url }}">
 
-	<source media="(max-width: 1023px)" srcset="{{ '/assets/ryan-medium.webp' | url }}" type="image/webp">
-	<source media="(max-width: 1023px)" srcset="{{ '/assets/ryan-medium.jpg' | url }}">
+	<source media="(min-width: 640px) and (max-width: 1023px)" srcset="{{ '/assets/ryan-medium.webp' | url }}" type="image/webp">
+	<source media="(min-width: 640px) and (max-width: 1023px)" srcset="{{ '/assets/ryan-medium.jpg' | url }}">
 
 	<source media="(min-width: 1024px)" srcset="{{ '/assets/ryan-max.webp' | url }}" type="image/webp">
 	<source media="(min-width: 1024px)" srcset="{{ '/assets/ryan-max.jpg' | url }}">
 
-	<img src="{{ '/assets/ryan-medium.jpg' | url }}" class="opacity-85 object-cover object-[50%_15%] size-full" alt="Ryan sat on a grey couch, holding a mug. He wears grey glasses and a blue t-shirt, with a blue wall in the background." title="It's a me, Ryan!" id="ryan" fetchpriority="high" width="2880" height="2880">
+	<img
+		src="{{ '/assets/ryan-medium.jpg' | url }}"
+		class="opacity-85 object-cover object-[50%_15%] size-full"
+		alt="Ryan sat on a grey couch, holding a mug. He wears grey glasses and a blue t-shirt, with a blue wall in the background."
+		title="It's a me, Ryan!"
+		id="ryan"
+		fetchpriority="high"
+		loading="eager"
+		sizes="(max-width: 639px) 100vw, (min-width: 640px) and (max-width: 1023px) 50vw, 50vw"
+		width="2880"
+		height="2880"
+	>
 </picture>
 
 <div class="bg-brand-800 relative z-10 w-full max-md:mt-[50svh] p-6 lg:p-8 md:w-1/2 md:ml-auto text-default tracking-[0.0125em] linkify [&_p]:max-w-[50ch] text-pretty" id="about">
