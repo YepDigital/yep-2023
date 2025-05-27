@@ -114,8 +114,10 @@ module.exports = {
         small: ['clamp(1rem, 0.909rem + 0.29vw, 1.375rem)', '1.4'],
 				// Min/Max 16/24px
         default: ['clamp(1.125rem, 1.034rem + 0.29vw, 1.5rem)', '1.5'],
-				// Min/Max 20/24px
+				// Min/Max 22/28px
         heading: ['clamp(1.375rem, 1.284rem + 0.29vw, 1.75rem)', '1.3'],
+				// Min/Max 24/32px
+        'heading-xl': ['clamp(2rem, 1.818rem + 0.58vw, 2.75rem)', '1.3']
       },
     },
   },

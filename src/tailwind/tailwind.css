@@ -5,6 +5,11 @@
 @import "iphone";
 @import "fonts";
 
+body {
+	/* Corrects macOS browser font rendering, see https://dbushell.com/2024/11/05/webkit-font-smoothing/ */
+	-webkit-font-smoothing: antialiased;
+}
+
 /* @keyframes fadeIn {
 	0% {
 		opacity: 0;
