@@ -4,7 +4,7 @@
   "description": "Website of Yep Digital",
   "scripts": {
     "clean": "rimraf _site",
-    "build": "npm run clean && cross-env NODE_ENV=production eleventy && npm run tw:build",
+    "build": "npm run clean && npm run tw:build && cross-env NODE_ENV=production eleventy",
     "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
     "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy",
