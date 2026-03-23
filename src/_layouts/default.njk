@@ -23,6 +23,10 @@
 	<meta name="title" content="{{ metaTitle }}">
 	<meta name="description" content="{{ metaDesc }}">
 
+	{% if page.url.startsWith('/info') %}
+		<meta name="robots" content="noindex">
+	{% endif %}
+
 	<link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
 
 	<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
